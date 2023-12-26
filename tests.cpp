@@ -12,7 +12,7 @@ TEST(CandidateTest, Creation){
     Candidate candidate("Kevin Costner", "123", "123");
 
     // Проверка данных кандидата
-    EXPECT_EQ(candidate.name, "Kevin Costner", "123", "321");
+    EXPECT_EQ(candidate.name, "Kevin Costner");
     EXPECT_EQ(candidate.interests, "123");
     EXPECT_EQ(candidate.achievements, "321");
     EXPECT_EQ(candidate.votes, 0);
