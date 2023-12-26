@@ -20,7 +20,14 @@ int main() {
         string name;
         cout << "Enter the name of candidate #" << i + 1 << ": ";
         cin >> name;
-        candidates.push_back(Candidate(name));
+        string interests;
+        cout << "Enter the interests of candidate #" << i + 1 << ": ";
+        cin >> interests;
+        string achievements;
+        cout << "Enter the achievements of candidate #" << i + 1 << ": ";
+        cin >> achievements;
+        candidates.push_back(Candidate(name, interests, achievements));
+
     }
 
     // Проведение голосования

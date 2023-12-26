@@ -8,10 +8,14 @@ using namespace std;
 // Структура для хранения информации о кандидате
 struct Candidate {
     string name;
+    string interests;
+    string achievements;
     int votes;
 
-    Candidate(string n) {
+    Candidate(string n, string in, string ach) {
         name = n;
+        interests = in;
+        achievements = ach;
         votes = 0;
     }
 };
@@ -58,7 +62,7 @@ void conductElection(vector<Candidate>& candidates) {
     // Вывод списка кандидатов
     cout << "Candidates:" << endl;
     for (int i = 0; i < candidates.size(); i++) {
-        cout << i + 1 << ". " << candidates[i].name << endl;
+        cout << i + 1 << ". " << candidates[i].name << " interests: " << candidates[i].interests << " achievements: " << candidates[i].achievements << endl;
     }
 
     // Цикл голосования
