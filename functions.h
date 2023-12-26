@@ -92,27 +92,3 @@ void conductElection(vector<Candidate>& candidates) {
     // cout << "Результаты голосования:" << endl;
     outputElection(candidates);
 }
-// // test 1
-// void testInvalidCandidateCount() { 
-//     int numCandidates = -10;
-
-//     if (numCandidates > 0) {
-//         cout << "Test 1 Passed: Valid input." << endl;
-//         // return true;
-//     }
-//     else {
-//         cout << "Test 1 Failed: Invalid input. Try again." << endl;
-//         // return false;
-//     }
-// }
-// void testCandidateNameWithSpaces() {
-//     int numCandidates = 1;
-
-//     string name = "Haruki Murakami";
-
-//     if (name.find(' ') == string::npos) {
-//         cout << "Test 2 Passed: Valid input." << endl;
-//     } else {
-//         cout << "Test 2 Failed: Invalid input." << endl;
-//     }
-// }
