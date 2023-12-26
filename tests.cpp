@@ -9,7 +9,7 @@ std::istringstream autoUserInput(const std::string& input){
 }
 // Проверка оздания кандидата в старосты
 TEST(CandidateTest, Creation){
-    Candidate candidate("Kevin Costner", "123", "123");
+    Candidate candidate("Kevin Costner", "123", "321");
 
     // Проверка данных кандидата
     EXPECT_EQ(candidate.name, "Kevin Costner");
