@@ -9,17 +9,17 @@ std::istringstream autoUserInput(const std::string& input){
 }
 // Проверка оздания кандидата в старосты
 TEST(CandidateTest, Creation){
-    Candidate candidate("Kevin Costner");
+    Candidate candidate("Kevin Costner", "123", "123");
 
     // Проверка данных кандидата
-    EXPECT_EQ(candidate.name, "Kevin Costner");
+    EXPECT_EQ(candidate.name, "Kevin Costner", "123", "123");
     EXPECT_EQ(candidate.votes, 0);
 }
 // Проверка правильности проведения выборов
 TEST(ElectionTest, ConductElection){
     vector<Candidate> candidates;
-    candidates.push_back(Candidate("Candidate1"));
-    candidates.push_back(Candidate("Candidate2"));
+    candidates.push_back(Candidate("Candidate1", "123", "123"));
+    candidates.push_back(Candidate("Candidate2", "123", "123"));
 
     // Имитация ввода пользователя и отправка в буфер
     std::istringstream input_stream("1\n2\n0\n");
@@ -33,8 +33,8 @@ TEST(ElectionTest, ConductElection){
 // Проверка правильности подсчёта голосов, противодействие фальсификациям
 TEST(ElectionTest, VoteForCandidate){
     vector<Candidate> candidates;
-    candidates.push_back(Candidate("Candidate1"));
-    candidates.push_back(Candidate("Candidate2"));
+    candidates.push_back(Candidate("Candidate1", "123", "123"));
+    candidates.push_back(Candidate("Candidate2", "123", "123"));
 
     std::istringstream input_stream("1\n1\n1\n0\n");
 
@@ -56,8 +56,8 @@ TEST(ElectionTest, ZeroCandidates){
 }
 TEST(ElectionTest, ZeroVotes){
     vector<Candidate> candidates;
-    candidates.push_back(Candidate("Candidate1"));
-    candidates.push_back(Candidate("Candidate2"));
+    candidates.push_back(Candidate("Candidate1", "123", "123"));
+    candidates.push_back(Candidate("Candidate2", "123", "123"));
 
     std::istringstream input_stream("0\n");
     std::cin.rdbuf(input_stream.rdbuf());
