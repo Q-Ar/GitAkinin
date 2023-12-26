@@ -2,16 +2,16 @@ cmake_minimum_required(VERSION 3.27)
 
 project(head_of_group_fork)
 
-#enable_testing()
+enable_testing()
 
-#add_subdirectory(googletest)
+add_subdirectory(googletest)
 
-#include_directories(googletest/include)
+include_directories(googletest/include)
 
 add_executable(msin main.cpp)
 
-#target_link_libraries(tests PRIVATE gtest)
+target_link_libraries(tests PRIVATE gtest)
 
-#include(GoogleTest)
+include(GoogleTest)
 
-#gtest_discover_tests(tests)
+gtest_discover_tests(tests)
